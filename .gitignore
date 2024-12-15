@@ -1,3 +1,10 @@
+.gradio
+*.json
+*.JPG
+*.png
+*.pt
+*.pth
+*.xlsx
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
