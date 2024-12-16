@@ -33,8 +33,8 @@ def classify_color(image):
     predicted_class = "Class"
     confidence = 0.95
 
-    model = torch.jit.load(MODELS_DIR / "scripted_model.pt")
-    model.load_state_dict(torch.load(MODELS_DIR / "best_model_weights.pth", weights_only=True))
+    model = torch.jit.load(MODELS_DIR / "scripted_model.pt", map_location=torch.device('cpu'))
+    model.load_state_dict(torch.load(MODELS_DIR / "best_model_weights.pth", map_location=torch.device('cpu')))
 
     model = model.to("cpu")
     model.eval()
